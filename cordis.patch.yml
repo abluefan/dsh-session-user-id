@@ -1,0 +1,10 @@
+# dsh-session-user-id bundle patch
+#
+# 一條 insert 行掛載本插件。
+#
+# ⚠ 用 `dsh plugin add` 安裝時，包名會進 dsh.profile.bundles，
+#   由 bundles 層讀這個檔案；此時**不要**再手寫 insert 到
+#   profiles/web/cordis.patch.yml —— 同一個 id 會被插兩次。
+- insert:
+    - id: session-user-id
+      name: 'dsh-session-user-id'

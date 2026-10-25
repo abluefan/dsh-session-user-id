@@ -1,0 +1,27 @@
+{
+  "name": "dsh-session-user-id",
+  "version": "0.1.0",
+  "description": "為每條 session 分配持久、唯一、隨機嘅 DeepSeek API user_id，用文件保存 sessionId → userId 映射。用 deepseekLlmApiExtensions 擴展點，唔改 DSH 源碼。",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "dsh": ">=0.2.1-rc.2"
+  },
+  "main": "./index.js",
+  "exports": {
+    ".": {
+      "default": "./index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
